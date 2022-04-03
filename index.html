@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <div id="unity-container" style="width: 100%; height: 100%">
-      <canvas id="unity-canvas" width=auto height=auto></canvas>
+    <div id="unity-container" style="width:100%; height:100%">
+      <canvas id="unity-canvas" width=auto height=auto"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -29,11 +29,11 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Portfolio.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Portfolio.data.gz",
-        frameworkUrl: buildUrl + "/Portfolio.framework.js.gz",
-        codeUrl: buildUrl + "/Portfolio.wasm.gz",
+        dataUrl: buildUrl + "/Portfolio.data",
+        frameworkUrl: buildUrl + "/Portfolio.framework.js",
+        codeUrl: buildUrl + "/Portfolio.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
+        companyName: "Yoma",
         productName: "Portfolio",
         productVersion: "0.1",
       };
@@ -64,7 +64,7 @@
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
-          loadingBar.style.display = "none";     
+          loadingBar.style.display = "none";          
         }).catch((message) => {
           alert(message);
         });
